@@ -127,6 +127,19 @@
 	width:190px;
 	height:150px;
 }
+
+.redborder{
+	position: absolute;
+	left: 260px;
+	top: 335px;
+	width: 70px;
+	height: 70px;
+	border-radius: 5px;
+	border-style: solid;
+	border-color: red;
+	border-width: 4px;
+	color: transparent;
+}
 body{
 	background: #505050;
 }
