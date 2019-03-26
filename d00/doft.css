@@ -5,12 +5,14 @@
 }
 
 .topbar{
-	height: 100px;
-	width: 1100px;
+	height: 110px;
+	width: 1400px;
 	padding: 10px;
 	background: #909090;
 	border-radius: 15px;
-	margin: 12px;
+	position: absolute;
+	left: 200px;
+	top: 15px;
 	box-shadow: 10px 10px 10px;
 }
 
@@ -26,20 +28,23 @@
 	padding:25px;
 	background: #909090;
 	border-radius: 15px;
-	margin: 10px;
-	vertical-align: top;
+	position: absolute;
+	left: 230px;
+	top: 165px;
 	box-shadow: 10px 10px 10px;
 	text-align: center;
 }
 
-
 .center{
 	display:inline-block;
-	height: 500px;
-	width: 700px;
+	height: 565px;
+	width: 1000px;
 	background: #909090;
 	border-radius: 15px;
-	margin: 10px;
+	position: absolute;
+	left: 400px;
+	top: 165px;
+	padding: 10px;
 	box-shadow: 10px 10px 10px;
 }
 
@@ -50,13 +55,59 @@
 	padding:25px;
 	background: #909090;
 	border-radius: 15px;
-	margin: 10px;
+	position: absolute;
+	left: 1450px;
+	top: 165px;
 	vertical-align: top;
 	box-shadow: 10px 10px 10px;
 }
 
-.popup{
+.redstuff{
+	display: grid;
+	position: absolute;
+	left:1390px;
+	top: 10px;
+	height: 185px;
+}
 
+.loupe{
+	position: absolute;
+	left: 1130px;
+	top: 0px;
+}
+
+.wall{
+	color: transparent;
+	background-image: url(resources/brick.jpg);
+	repeat: repeat;
+	position: absolute;
+	line-height: 440%;
+	left:1462px;
+	top:350px;
+}
+	
+.popup{
+	background: #88FF89;
+	position: absolute;
+	font-family: sans-serif;
+	top: 600px;
+	left: 100px;
+	width: 510px;
+	height: 170px;
+	line-height: 55%;
+	border-radius: 10px;
+	padding-left: 10px;
+	padding-top: 20px;
+	box-shadow: 10px 10px 10px;
+}
+
+.entrez{
+	font-family: serif;
+	font-size: 230%;
+}
+
+.ord{
+	text-shadow: 5px 5px 5px red;
 }
 
 body{
