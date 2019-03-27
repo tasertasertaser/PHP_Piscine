@@ -1,15 +1,39 @@
 #! /usr/bin/env php
 <?php
 
-	echo "Enter a number:";
-	$stdin = fopen('php://stdin', 'r');
-	$response = fgets($stdin);
-	$num = intval( $argv[1] );
-	if ( $num == 0 || $num % 2 == 0 ){
-	echo "The number $argv[1] is even.";
+	
+$stdin = fopen('php://stdin', 'r');
+echo "Enter a number: ";
+
+function evenodd($response)
+	{
+		$num = intval( substr($response, -1));
+		if ( $num % 2 == 0 )
+		{
+			echo "The number $response is even.\n";
+		}
+		else
+		{
+			echo "The number $response is odd.\n";
+		}
+	}
+
+while($response = rtrim(fgets($stdin), "\n"))
+{
+
+	if(!ctype_digit($response)){
+		if(substr($response, 0, 1) == '-' && ctype_digit(substr($response, 1)))
+		{
+			evenodd($response);
+		}
+		else{
+		echo "$response is not a number.\n";
+		}
 	}
 	else
 	{
-		echo "The number $argv[1] is odd.";
+		evenodd($response);
 	}
+	echo "Enter a number: ";
+}
 ?>
