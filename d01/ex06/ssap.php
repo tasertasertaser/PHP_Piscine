@@ -1,8 +1,6 @@
 #! /usr/bin/env php
 <?php
 	
-sort($argv);
-
 $sandwich = $argv[0];
 
 array_shift($argv);
