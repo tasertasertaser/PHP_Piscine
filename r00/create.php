@@ -1,6 +1,10 @@
 <?php
 // php -S localhost:8100
 
+echo "<a href=\"index.php\">store.com</a>";
+echo "<html><head><title>eCommerce Storefront</title><link href=\"styles.css\" rel=\"stylesheet\" type=\"text/css\"></head><body>";
+echo "<div class = \"topbar\" id = \"topbar\"></div>";
+
 	session_start();
 
 	$usercount = 0;
@@ -11,15 +15,20 @@
 				foreach ($passwdFile as $user){
 					$usercount++;
 					if($_POST['login'] == $user['login']){
-						echo "ERROR -- user exists\n";
+						echo "<center><div class=\"box1\">";
+						echo "ERROR";
+						echo "<p class=\"subhead\">user exists</p>\n";
+						echo "</div></center>";
 						return;
 					}
 				}
 					$hashPass = hash('whirlpool', $_POST['passwd']);
 					$passwdFile[$usercount] = array('login'=>$_POST['login'], 'passwd'=>$hashPass);
 					file_put_contents('./private/passwd', serialize($passwdFile));
-					echo "OK\n";
-					return;
+					$_SESSION['loggued_on_user'] = $_POST['login'];
+					header("Location: http://localhost:8100/index.php");
+					die();
+					
 				
 			}
 			else{
@@ -33,11 +42,14 @@
 			echo "ERROR -- not enough input\n";
 			return;
 		}
-		echo "OK\n";
+		echo "user ";
+		echo $_POST['login'];
+		echo " created\n";
+		return;
 	}
 	else{
 		echo "ERROR -- sumbit != OK\n";
 		return;
 	}
-
+echo "</body></html>";
 ?>
