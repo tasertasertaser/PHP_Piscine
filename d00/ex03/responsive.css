@@ -1,0 +1,99 @@
+
+	body{
+		background-image: url(https://i.imgur.com/ZM4we9a.png);
+	}
+	
+	.title{
+		font-family: "Bebas Neue";
+		font-size: 9vh;
+		color: white;
+	}
+
+
+	.wrapper{
+		display:grid;
+		height: 10vh;
+		width: 80vw;
+		font-family: "Monaco";
+		grid-template-rows: repeat(10, 1fr);
+	}
+
+/*================SUBDIVISION================*/
+
+	.row{
+		display: grid;
+		grid-template-columns: repeat(18, 1fr);
+
+	}
+	.element{
+		background: #FFF;
+		padding:3px;
+		width: 3.5vw;
+		margin-top: .6vh;
+		margin-left: .2vh;
+		height: 6vh;
+	}
+
+/*================ELEMENTS================*/
+
+	.nonmetal{
+		background: #ab35ff;
+	}
+	.noblegas{
+		background: #ff3679;
+	}
+	.alkalimetal{
+		background: #ffac37;
+	}
+	.alkalinemetal{
+		background: #f1ff38;
+	}
+	.metalloid{
+		background: #ff9868;
+	}
+	.posttransmetal{
+		background: #ff89c0;
+	}
+	.transmetal{
+		background: #d589ff;
+	}
+	.lanthanide{
+		background: #91ff89;
+	}
+	.actinide{
+		background: #41f4ca;
+	}
+	.synthetic{
+		background: #4286f4;
+	}
+	.lanactborder{
+		background: #FFF;
+	}
+	.invisible{
+		background: transparent;
+	}
+
+/*================ELEMENT INFORMATION================*/
+
+	.symbol{
+		font-weight: 'bold';
+		text-align: center;
+		font-size: 3vh;
+		line-height: 125%;
+	}
+	.number{
+		text-align: left;
+		font-size: 1.2vh;
+		line-height: 130%;
+	}
+	.mass{
+		text-align: right;
+		font-size: 1.2vh;
+		line-height: 100%;
+	}
+	.secret{
+		color:transparent;
+		font-size: .3vh;
+		white-space: nowrap;
+		line-height: 80%;
+	}

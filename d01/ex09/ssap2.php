@@ -18,10 +18,10 @@ function cmp($a, $b)
 	$i = 0;
 	$a = strtolower($a);
 	$b = strtolower($b);
-	$shorter = min(strlen($a), strlen($b));
-	while ($i < $shorter && ($a[$i] == $b[$i]))
+	$shorter = min(strlen($a), strlen($b)); // find end of the shorter string
+	while ($i < $shorter && ($a[$i] == $b[$i])) // setting i to the first different character
 		$i++;
-	if ($i == $shorter && strlen($a) == $shorter)
+	if ($i == $shorter && strlen($a) == $shorter) // check if one string has ended & the other hasn't
 		return -1;	
 	if ($a[$i] && $b[$i])
 	{
@@ -29,7 +29,7 @@ function cmp($a, $b)
 		$bChartype = getchartype($b[$i]);
 		if($aChartype > $bChartype)
 			return 1;
-		else if($aChartype < $bChartype)
+		else if($aChartype < $bChartype) 
 			return -1;
 		else if($aChartype == $bChartype)
 		{

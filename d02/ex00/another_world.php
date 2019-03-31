@@ -4,4 +4,3 @@
 echo trim(preg_replace('/[\t ]+/', ' ', $argv[1]));
 
 ?>
-
